@@ -6,7 +6,7 @@ output:
     number_sections: false
     keep_tex: true
     includes:
-      in_header: "preamble.tex"
+      in_header: "sipreamble.tex"
 bibliography: "references.bib"
 abstract: The abstract (but it could also be a normal section).
 title: "Paper title"
@@ -15,25 +15,26 @@ author:
   - Author 2^[Institution 2, email2]
 ---
 
-
-```{r setup, echo=FALSE}
+```{r sisetup, echo=F}
+options(tinytex.clean = FALSE)
 ```
 
-# Introduction
+# Supporting Information
 
-This paper is neat [@Ragsdale2020-hv].
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
-@Ragsdale2020-hv is still a neat paper if we cite it like this.
-
-```{r figure, echo=F, fig.cap="A figure", fig.align="center", out.width="50%"}
+```{r sfigure, echo=F, fig.cap="A figure", fig.align="center", out.width="50%"}
 knitr::include_graphics("Model.png")
 ```
 
-See Figure \@ref(fig:figure).
-
-See Supplementary Figure \@ref(fig:figure).
+Figure \@ref(fig:sfigure) is from @Thornton2019-nu.
 
 \clearpage
 \newpage
 
-# References
+# Supporting References
+
+
