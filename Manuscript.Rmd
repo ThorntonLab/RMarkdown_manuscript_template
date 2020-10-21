@@ -8,7 +8,7 @@ output:
     includes:
       in_header: "preamble.tex"
 bibliography: "references.bib"
-abstract: The abtract (but it could also be a normal section).
+abstract: The abstract (but it could also be a normal section).
 title: "Paper title"
 author:
   - Author 1^[Institution 1, email1]
