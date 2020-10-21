@@ -30,6 +30,14 @@ If you add external images to this repository that will be graphics for slides:
 1. Commit them!
 2. Add them to the `IMAGES` variable in `Makefile` so that your slides rebuild if they change.
 
+The supporting material document is `SupportingInformation.Rmd`.
+Any figures and tables added here start counting again from `1` and have an `S` prepended to their labels.
+If you add supplemental equations, you'll want to do similar tricks for equation numbers and labels.
+This document also gets a separate bibliography, but it uses the same `.bib` file as the main manuscript file.
+The supporting material is a build dependency for the main manuscript.
+Thus, any changes there will cause the main manuscript to be re-processed when a `make` command is issued.
+This file also uses a separate preamble, `sipreamble.tex`.
+
 ### Managing the bibliography
 
 Add new `Bibtex` records to `references.bib`.
@@ -49,8 +57,8 @@ If the bibliography file contains a citation key `AuthorYear`, then the citation
 To use auto completion, typing `@A<C-X-O>` will bring up a completion list of all citation keys starting with `A`.
 You then select the correct key from that list.
 
-The default citation code (`[@AuthorYear]`) results in a parenthetical citation, equivalent to `\citet`.
-The code `@AuthorYear` is equivalent to `\citep`.
+The default citation code (`[@AuthorYear]`) results in a parenthetical citation, equivalent to `\citep`.
+The code `@AuthorYear` is equivalent to `\citet`.
 To the best of my knowledge, there is no equivalent to `\citeyearpar`.
 However, you may use that command "manually", as you may enter any valid `LaTeX` in your markdown file.
 
