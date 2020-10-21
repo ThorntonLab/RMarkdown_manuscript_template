@@ -1,6 +1,7 @@
 PAPERFILENAME:=Manuscript
 BIBFILE:=references.bib
 PDF:=$(PAPERFILENAME).pdf
+IMAGES:=Model.png
 
 all: $(PDF)
 
@@ -11,5 +12,5 @@ clean:
 %.pdf: %.Rmd
 	R --no-save --quiet -e "rmarkdown::render('$<')"
 
-$(PAPERFILENAME).pdf: $(PAPERFILENAME).Rmd $(BIBFILE)
+$(PAPERFILENAME).pdf: $(PAPERFILENAME).Rmd $(BIBFILE) $(IMAGES)
 
