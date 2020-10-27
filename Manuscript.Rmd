@@ -7,7 +7,7 @@ output:
     keep_tex: true
     includes:
       in_header: "preamble.tex"
-bibliography: "references.bib"
+bibliography: "references_processed.bib"
 abstract: The abstract (but it could also be a normal section).
 title: "Paper title"
 author:
