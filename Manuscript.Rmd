@@ -7,7 +7,7 @@ output:
     keep_tex: true
     includes:
       in_header: "preamble.tex"
-bibliography: "references.bib"
+bibliography: "references_processed.bib"
 abstract: The abstract (but it could also be a normal section).
 title: "Paper title"
 author:
@@ -25,6 +25,8 @@ author:
 This paper is neat [@Ragsdale2020-hv].
 
 @Ragsdale2020-hv is still a neat paper if we cite it like this.
+
+@Skov2020-jc is a paper with Icelandic diacritics used in author names.
 
 ```{r figure, echo=F, fig.cap="A figure", fig.align="center", out.width="50%"}
 knitr::include_graphics("Model.png")
