@@ -15,6 +15,7 @@ author:
   - Author 2^[Institution 2, email2]
 ---
 
+\linenumbers
 
 ```{r setup, echo=FALSE}
 ```
