@@ -14,6 +14,8 @@ author:
   - Author 2^[Institution 2, email2]
 ---
 
+\linenumbers
+
 ```{r sisetup, echo=F}
 options(tinytex.clean = FALSE)
 ```
